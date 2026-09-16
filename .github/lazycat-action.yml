@@ -1,0 +1,38 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: .lazycat-build/easy-vdl.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: easy-vdl
+    bump: patch
+build:
+  run_buildscript: false
+images:
+  - id: easy-vdl
+    target: service
+    service: easy-vdl
+    source: qq918652593/easy-vdl
+    channel: custom
+    sort: created
+    tag_regex: '^latest$'
+    delivery:
+      mode: lazycat
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    changelog_locales: [zh, en]
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Easy-VDL
+    summary: "统一视频下载平台"

@@ -1,0 +1,14 @@
+package: community.lazycat.app.easy-vdl
+version: 0.1.0
+name: Easy-VDL
+description: "统一视频下载平台"
+min_os_version: "1.5.0"
+homepage: https://hub.docker.com/r/qq918652593/easy-vdl
+author: 隔壁小王
+locales:
+  zh:
+    description: "统一视频下载平台"
+    name: Easy-VDL
+  en:
+    description: "Unified video download platform"
+    name: Easy-VDL

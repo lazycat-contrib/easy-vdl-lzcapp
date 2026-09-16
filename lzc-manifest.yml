@@ -1,0 +1,18 @@
+application:
+  subdomain: easy-vdl
+  multi_instance: true
+  background_task: true
+  public_path:
+    - /
+  upstreams:
+    - location: /
+      backend: http://easy-vdl:80
+ext_config:
+  enable_document_access: true
+  enable_media_access: true
+services:
+  easy-vdl:
+    # upstream: qq918652593/easy-vdl:latest
+    image: qq918652593/easy-vdl:latest
+    binds:
+      - /lzcapp/run/mnt/home/下载:/app/downloads
