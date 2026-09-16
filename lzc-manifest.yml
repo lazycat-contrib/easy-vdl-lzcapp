@@ -12,7 +12,7 @@ ext_config:
   enable_media_access: true
 services:
   easy-vdl:
-    # upstream: qq918652593/easy-vdl:latest
-    image: qq918652593/easy-vdl:latest
+    # upstream: qq918652593/easy-vdl:latest@sha256:e32c71b14a40f3bdc1170410089467914c8a925b82dfc294266ec4582d273f32
+    image: registry.lazycat.cloud/czyt/qq918652593/easy-vdl:ceee9ff0ef5391c7
     binds:
       - /lzcapp/run/mnt/home/下载:/app/downloads
